@@ -31,7 +31,7 @@ def getFacebookLikes():
     with open('FaceBookHandlersWithLikes.csv', mode='w') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(["FB_PAGE_HANDLE", "LIKES"])
-        csv_writer.writerow([handlers[0], temp[0]])
-        csv_writer.writerow([handlers[1], temp[1]])
+        for i in range(len(temp)):
+        	csv_writer.writerow([handlers[i], temp[i]])
 
 getFacebookLikes()
